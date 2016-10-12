@@ -1,0 +1,25 @@
+@CHARSET "ISO-8859-1";
+
+body{
+	background-color: #d5d6df;
+}
+.mainSection{
+	background-color: white;
+	border-radius: 10px;
+	height: 550px; 
+}
+.topMenuStyle, .footerStyle{
+	background-color: #757896;
+	border: none;
+	border-radius:0px;
+	padding:5px;
+}
+.footerStyle{
+	color: black;
+	font-weight: bold;
+	margin-top:20px;
+}
+.topMenuStyle a{
+	font-style: none;
+	color:black;
+}
