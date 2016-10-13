@@ -7,12 +7,12 @@ public class Honorario {
 	double duracao;
 	String observacao;
 	String tarefa;
-
+	Advogado advogado;
+	
 	/**
 	 * 
 	 */
 	public Honorario() {
-
 	}
 
 	/**
@@ -20,12 +20,14 @@ public class Honorario {
 	 * @param duracao
 	 * @param observacao
 	 * @param tarefa
+	 * @param advogado
 	 */
-	public Honorario(Calendar data, double duracao, String observacao, String tarefa) {
+	public Honorario(Calendar data, double duracao, String observacao, String tarefa, Advogado advogado) {
 		this.data = data;
 		this.duracao = duracao;
 		this.observacao = observacao;
 		this.tarefa = tarefa;
+		this.advogado = advogado;
 	}
 
 	/**
@@ -36,8 +38,7 @@ public class Honorario {
 	}
 
 	/**
-	 * @param data
-	 *            the data to set
+	 * @param data the data to set
 	 */
 	public void setData(Calendar data) {
 		this.data = data;
@@ -51,8 +52,7 @@ public class Honorario {
 	}
 
 	/**
-	 * @param duracao
-	 *            the duracao to set
+	 * @param duracao the duracao to set
 	 */
 	public void setDuracao(double duracao) {
 		this.duracao = duracao;
@@ -66,8 +66,7 @@ public class Honorario {
 	}
 
 	/**
-	 * @param observacao
-	 *            the observacao to set
+	 * @param observacao the observacao to set
 	 */
 	public void setObservacao(String observacao) {
 		this.observacao = observacao;
@@ -81,11 +80,26 @@ public class Honorario {
 	}
 
 	/**
-	 * @param tarefa
-	 *            the tarefa to set
+	 * @param tarefa the tarefa to set
 	 */
 	public void setTarefa(String tarefa) {
 		this.tarefa = tarefa;
 	}
 
+	/**
+	 * @return the advogado
+	 */
+	public Advogado getAdvogado() {
+		return advogado;
+	}
+
+	/**
+	 * @param advogado the advogado to set
+	 */
+	public void setAdvogado(Advogado advogado) {
+		this.advogado = advogado;
+	}
+
+	
+	
 }

@@ -8,7 +8,6 @@ public class Processo {
 	Honorario[] honorario;
 	Forum forum;
 	Despesa[] despesa;
-	Advogado[] advogado;
 	String descricao;
 	Calendar dataAbertura;
 	Calendar dataFechamento;
@@ -16,6 +15,7 @@ public class Processo {
 	int resultado;
 	int situacao;
 	String observacao;
+	Taxa taxa;
 	
 	/**
 	 * 
@@ -30,7 +30,6 @@ public class Processo {
 	 * @param honorario
 	 * @param forum
 	 * @param despesa
-	 * @param advogado
 	 * @param descricao
 	 * @param dataAbertura
 	 * @param dataFechamento
@@ -40,14 +39,13 @@ public class Processo {
 	 * @param observacao
 	 */
 	public Processo(Cliente cliente, Especialidade especialidade, Honorario[] honorario, Forum forum, Despesa[] despesa,
-			Advogado[] advogado, String descricao, Calendar dataAbertura, Calendar dataFechamento,
-			Calendar dataVencimento, int resultado, int situacao, String observacao) {
+			String descricao, Calendar dataAbertura, Calendar dataFechamento, Calendar dataVencimento, int resultado,
+			int situacao, String observacao, Taxa taxa) {
 		this.cliente = cliente;
 		this.especialidade = especialidade;
 		this.honorario = honorario;
 		this.forum = forum;
 		this.despesa = despesa;
-		this.advogado = advogado;
 		this.descricao = descricao;
 		this.dataAbertura = dataAbertura;
 		this.dataFechamento = dataFechamento;
@@ -55,6 +53,7 @@ public class Processo {
 		this.resultado = resultado;
 		this.situacao = situacao;
 		this.observacao = observacao;
+		this.taxa = taxa;
 	}
 
 	/**
@@ -125,20 +124,6 @@ public class Processo {
 	 */
 	public void setDespesa(Despesa[] despesa) {
 		this.despesa = despesa;
-	}
-
-	/**
-	 * @return the advogado
-	 */
-	public Advogado[] getAdvogado() {
-		return advogado;
-	}
-
-	/**
-	 * @param advogado the advogado to set
-	 */
-	public void setAdvogado(Advogado[] advogado) {
-		this.advogado = advogado;
 	}
 
 	/**
@@ -238,5 +223,22 @@ public class Processo {
 	public void setObservacao(String observacao) {
 		this.observacao = observacao;
 	}
+
+	/**
+	 * @return the taxa
+	 */
+	public Taxa getTaxa() {
+		return taxa;
+	}
+
+	/**
+	 * @param taxa the taxa to set
+	 */
+	public void setTaxa(Taxa taxa) {
+		this.taxa = taxa;
+	}
+	
+	
+	
 	
 }

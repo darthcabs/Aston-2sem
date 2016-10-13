@@ -7,6 +7,8 @@ public class Taxa {
 	double administrativa;
 	double juros;
 	double diaria;
+	
+	
 	/**
 	 * 
 	 */
