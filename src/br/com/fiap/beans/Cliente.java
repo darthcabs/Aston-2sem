@@ -1,22 +1,24 @@
 package br.com.fiap.beans;
 
+import java.util.List;
+
 public class Cliente extends Pessoa{
 	String razaoSocial;
 	String cnpj;
-	String inscricaoEstadural;
+	String inscricaoEstadual;
 	String email;
 	String password;
 
 	public Cliente() {
 	
 	}
-
-	public Cliente(String nome, Telefone telefone[], Endereco endereco[], String razaoSocial, String cnpj,
-			String inscricaoEstadural, String email, String password) {
-		super(nome, telefone, endereco);
+	
+	public Cliente(long codigo, List<Telefone> telefone, List<Endereco> endereco, String razaoSocial, String cnpj,
+			String inscricaoEstadual, String email, String password) {
+		super(codigo, telefone, endereco);
 		this.razaoSocial = razaoSocial;
 		this.cnpj = cnpj;
-		this.inscricaoEstadural = inscricaoEstadural;
+		this.inscricaoEstadual = inscricaoEstadual;
 		this.email = email;
 		this.password = password;
 	}
@@ -37,12 +39,12 @@ public class Cliente extends Pessoa{
 		this.cnpj = cnpj;
 	}
 
-	public String getInscricaoEstadural() {
-		return inscricaoEstadural;
+	public String getInscricaoEstadual() {
+		return inscricaoEstadual;
 	}
 
-	public void setInscricaoEstadural(String inscricaoEstadural) {
-		this.inscricaoEstadural = inscricaoEstadural;
+	public void setInscricaoEstadual(String inscricaoEstadual) {
+		this.inscricaoEstadual = inscricaoEstadual;
 	}
 
 	public String getEmail() {

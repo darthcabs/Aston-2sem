@@ -1,12 +1,16 @@
 package br.com.fiap.beans;
 
+import java.util.List;
+
 public class Forum extends Pessoa{
 	String descricao;
 	
-	public Forum(){}
+	public Forum(){
+		
+	}
 	
-	public Forum(String nome, Telefone[] telefone, Endereco[] endereco, String descricao){
-		super(nome, telefone, endereco);
+	public Forum(Long codigo, String nome, List<Telefone> telefone, List<Endereco> endereco, String descricao){
+		super(codigo, nome, telefone, endereco);
 		this.descricao = descricao;
 	}
 
@@ -17,5 +21,4 @@ public class Forum extends Pessoa{
 	public void setDescricao(String descricao) {
 		this.descricao = descricao;
 	}
-	
 }

@@ -1,20 +1,39 @@
 package br.com.fiap.beans;
 
+import java.util.List;
+
 public class Pessoa {
-	String nome;
-	Telefone[] telefone;
-	Endereco[] endereco;
+	protected long codigo;
+	protected String nome;
+	protected List<Telefone> telefones;
+	protected List<Endereco> enderecos;
 	
 	public Pessoa(){
 
 	}
 
-	public Pessoa(String nome, Telefone telefone[], Endereco endereco[]){
+	public Pessoa(long codigo, List<Telefone> telefone, List<Endereco> endereco) {
+		this.codigo = codigo;
+		this.telefones = telefone;
+		this.enderecos = endereco;
+	}
+	
+	public Pessoa(long codigo, String nome, List<Telefone> telefone, List<Endereco> endereco) {
+		super();
+		this.codigo = codigo;
 		this.nome = nome;
-		this.telefone = telefone;
-		this.endereco = endereco;
+		this.telefones = telefone;
+		this.enderecos = endereco;
 	}
 
+	public long getCodigo() {
+		return codigo;
+	}
+
+	public void setCodigo(long codigo) {
+		this.codigo = codigo;
+	}
+	
 	public String getNome() {
 		return nome;
 	}
@@ -23,20 +42,19 @@ public class Pessoa {
 		this.nome = nome;
 	}
 
-	public Telefone[] getTelefone() {
-		return telefone;
+	public List<Telefone> getTelefones() {
+		return telefones;
 	}
 
-	public void setTelefone(Telefone[] telefone) {
-		this.telefone = telefone;
+	public void setTelefones(List<Telefone> telefone) {
+		this.telefones = telefone;
 	}
 
-	public Endereco[] getEndereco() {
-		return endereco;
+	public List<Endereco> getEnderecos() {
+		return enderecos;
 	}
 
-	public void setEndereco(Endereco[] endereco) {
-		this.endereco = endereco;
+	public void setEnderecos(List<Endereco> endereco) {
+		this.enderecos = endereco;
 	}
-
 }

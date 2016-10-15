@@ -1,0 +1,5 @@
+oracle
+localhost:1521
+XE
+david
+davifjc

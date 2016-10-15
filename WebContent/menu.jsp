@@ -1,8 +1,3 @@
-<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
-
-<script type="text/javascript" src="js/jquery-3.1.0.min.js"></script>					
-<script type="text/javascript" src="js/bootstrap.min.js"></script>						
-
 <nav class="navbar navbar-default">
   <div class="container-fluid">
     <!-- Brand and toggle get grouped for better mobile display -->
@@ -20,7 +15,7 @@
     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
       <ul class="nav navbar-nav">
         <li><a href="#">Cadastro de Cliente</a></li>
-        <li><a href="#">Lista de Clientes</a></li>
+        <li><a href="clientes?action=read">Lista de Clientes</a></li>
         <li><a href="#">Cadastro de Advogados</a></li>
         <li><a href="#">Lista de Advogados</a></li>        
       </ul>    
@@ -47,9 +42,3 @@
     </div><!-- /.navbar-collapse -->
   </div><!-- /.container-fluid -->
 </nav>
-
-
-
-
-
-

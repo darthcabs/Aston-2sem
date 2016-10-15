@@ -1,7 +1,7 @@
-@CHARSET "ISO-8859-1";
+@CHARSET "UTF-8";
 
 body{
-	background-color: #d5d6df;
+	background-color: white;
 }
 .mainSection{
 	background-color: white;

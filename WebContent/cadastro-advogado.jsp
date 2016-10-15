@@ -15,7 +15,7 @@
 			</div>
 			<div>
 				<form method="post" action="">
-					<div class="row">
+					<div class="form-group">
 						<div class="form-group">
 							<label class="control-label col-md-1 text-right">Nome: </label>
 							<div class="col-md-5">
