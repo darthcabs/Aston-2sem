@@ -1,13 +1,14 @@
 package br.com.fiap.beans;
 
 import java.util.Calendar;
+import java.util.List;
 
 public class Processo {
 	Cliente cliente;
 	Especialidade especialidade;
-	Honorario[] honorario;
+	List<Honorario> honorario;
 	Forum forum;
-	Despesa[] despesa;
+	List<Despesa> despesa;
 	String descricao;
 	Calendar dataAbertura;
 	Calendar dataFechamento;
@@ -24,23 +25,10 @@ public class Processo {
 		// TODO Auto-generated constructor stub
 	}
 
-	/**
-	 * @param cliente
-	 * @param especialidade
-	 * @param honorario
-	 * @param forum
-	 * @param despesa
-	 * @param descricao
-	 * @param dataAbertura
-	 * @param dataFechamento
-	 * @param dataVencimento
-	 * @param resultado
-	 * @param situacao
-	 * @param observacao
-	 */
-	public Processo(Cliente cliente, Especialidade especialidade, Honorario[] honorario, Forum forum, Despesa[] despesa,
-			String descricao, Calendar dataAbertura, Calendar dataFechamento, Calendar dataVencimento, int resultado,
-			int situacao, String observacao, Taxa taxa) {
+	public Processo(Cliente cliente, Especialidade especialidade, List<Honorario> honorario, Forum forum,
+			List<Despesa> despesa, String descricao, Calendar dataAbertura, Calendar dataFechamento,
+			Calendar dataVencimento, int resultado, int situacao, String observacao, Taxa taxa) {
+		super();
 		this.cliente = cliente;
 		this.especialidade = especialidade;
 		this.honorario = honorario;
@@ -55,6 +43,22 @@ public class Processo {
 		this.observacao = observacao;
 		this.taxa = taxa;
 	}
+
+	/**
+	 * @param cliente
+	 * @param especialidade
+	 * @param honorario
+	 * @param forum
+	 * @param despesa
+	 * @param descricao
+	 * @param dataAbertura
+	 * @param dataFechamento
+	 * @param dataVencimento
+	 * @param resultado
+	 * @param situacao
+	 * @param observacao
+	 */
+	
 
 	/**
 	 * @return the cliente
@@ -87,14 +91,14 @@ public class Processo {
 	/**
 	 * @return the honorario
 	 */
-	public Honorario[] getHonorario() {
+	public List<Honorario> getHonorario() {
 		return honorario;
 	}
 
 	/**
 	 * @param honorario the honorario to set
 	 */
-	public void setHonorario(Honorario[] honorario) {
+	public void setHonorario(List<Honorario> honorario) {
 		this.honorario = honorario;
 	}
 
@@ -115,14 +119,14 @@ public class Processo {
 	/**
 	 * @return the despesa
 	 */
-	public Despesa[] getDespesa() {
+	public List<Despesa> getDespesa() {
 		return despesa;
 	}
 
 	/**
 	 * @param despesa the despesa to set
 	 */
-	public void setDespesa(Despesa[] despesa) {
+	public void setDespesa(List<Despesa> despesa) {
 		this.despesa = despesa;
 	}
 
@@ -237,8 +241,4 @@ public class Processo {
 	public void setTaxa(Taxa taxa) {
 		this.taxa = taxa;
 	}
-	
-	
-	
-	
 }

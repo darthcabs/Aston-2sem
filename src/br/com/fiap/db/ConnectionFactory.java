@@ -14,17 +14,18 @@ public class ConnectionFactory {
 	
 	public Connection getConnection() throws Exception {
 		String db = "oracle";
-		String url = "@192.168.60.15";
+		String url = "oracle.fiap.com.br";
+		String port = "1521";
 		String instance = "ORCL";
 		String user = "OPS$RM76860";
-		String passwd = "";
+		String passwd = "060486";
 		
 		if (db.equals("oracle")) {
 			Class.forName("oracle.jdbc.driver.OracleDriver");
 		}
 		
-		Connection conn = DriverManager.getConnection("jdbc:" + db + ":thin:" + user + "/" + passwd  + "@" + url + "/" + instance);
-
+		Connection conn = DriverManager.getConnection("jdbc:" + db + ":thin:" + "@" + url + ":" + port + ":" + instance);
+		System.out.println("jdbc:" + db + ":thin:" + "@" + url + ":" + port + ":" + instance);
 		return conn;
 	}
 }
