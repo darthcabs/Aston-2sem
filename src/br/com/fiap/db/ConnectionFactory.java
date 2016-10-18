@@ -24,8 +24,7 @@ public class ConnectionFactory {
 			Class.forName("oracle.jdbc.driver.OracleDriver");
 		}
 		
-		Connection conn = DriverManager.getConnection("jdbc:" + db + ":thin:" + "@" + url + ":" + port + ":" + instance);
-		System.out.println("jdbc:" + db + ":thin:" + "@" + url + ":" + port + ":" + instance);
+		Connection conn = DriverManager.getConnection("jdbc:" + db + ":thin:" + "@" + url + ":" + port + ":" + instance, user, passwd);
 		return conn;
 	}
 }
