@@ -1,14 +1,13 @@
 package br.com.fiap.beans;
 
-import java.util.Calendar;
 
 public class Hora {
 	double valor;
-	Calendar data;
+	String data;
 	
 	public Hora(){}
 
-	public Hora(double valor, Calendar data) {
+	public Hora(double valor, String data) {
 		this.valor = valor;
 		this.data = data;
 	}
@@ -21,11 +20,11 @@ public class Hora {
 		this.valor = valor;
 	}
 
-	public Calendar getData() {
+	public String getData() {
 		return data;
 	}
 
-	public void setData(Calendar data) {
+	public void setData(String data) {
 		this.data = data;
 	}
 

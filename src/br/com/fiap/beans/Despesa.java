@@ -1,9 +1,8 @@
 package br.com.fiap.beans;
 
-import java.util.Calendar;
 
 public class Despesa {
-	Calendar data;
+	String data;
 	double valor;
 	String observacao;
 	String tipo;
@@ -20,7 +19,7 @@ public class Despesa {
 	 * @param observacao
 	 * @param tipo
 	 */
-	public Despesa(Calendar data, double valor, String observacao, String tipo) {
+	public Despesa(String data, double valor, String observacao, String tipo) {
 		this.data = data;
 		this.valor = valor;
 		this.observacao = observacao;
@@ -30,7 +29,7 @@ public class Despesa {
 	/**
 	 * @return the data
 	 */
-	public Calendar getData() {
+	public String getData() {
 		return data;
 	}
 
@@ -38,7 +37,7 @@ public class Despesa {
 	 * @param data
 	 *            the data to set
 	 */
-	public void setData(Calendar data) {
+	public void setData(String data) {
 		this.data = data;
 	}
 

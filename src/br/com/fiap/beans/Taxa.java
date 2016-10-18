@@ -1,9 +1,8 @@
 package br.com.fiap.beans;
 
-import java.util.Calendar;
 
 public class Taxa {
-	Calendar dataVigencia;
+	String dataVigencia;
 	double administrativa;
 	double juros;
 	double diaria;
@@ -21,7 +20,7 @@ public class Taxa {
 	 * @param juros
 	 * @param diaria
 	 */
-	public Taxa(Calendar dataVigencia, double administrativa, double juros, double diaria) {
+	public Taxa(String dataVigencia, double administrativa, double juros, double diaria) {
 		this.dataVigencia = dataVigencia;
 		this.administrativa = administrativa;
 		this.juros = juros;
@@ -30,13 +29,13 @@ public class Taxa {
 	/**
 	 * @return the dataVigencia
 	 */
-	public Calendar getDataVigencia() {
+	public String getDataVigencia() {
 		return dataVigencia;
 	}
 	/**
 	 * @param dataVigencia the dataVigencia to set
 	 */
-	public void setDataVigencia(Calendar dataVigencia) {
+	public void setDataVigencia(String dataVigencia) {
 		this.dataVigencia = dataVigencia;
 	}
 	/**

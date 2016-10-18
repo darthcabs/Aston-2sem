@@ -1,6 +1,5 @@
 package br.com.fiap.beans;
 
-import java.util.Calendar;
 
 public class Processo {
 	Cliente cliente;
@@ -9,9 +8,9 @@ public class Processo {
 	Forum forum;
 	Despesa[] despesa;
 	String descricao;
-	Calendar dataAbertura;
-	Calendar dataFechamento;
-	Calendar dataVencimento;
+	String dataAbertura;
+	String dataFechamento;
+	String dataVencimento;
 	int resultado;
 	int situacao;
 	String observacao;
@@ -39,7 +38,7 @@ public class Processo {
 	 * @param observacao
 	 */
 	public Processo(Cliente cliente, Especialidade especialidade, Honorario[] honorario, Forum forum, Despesa[] despesa,
-			String descricao, Calendar dataAbertura, Calendar dataFechamento, Calendar dataVencimento, int resultado,
+			String descricao, String dataAbertura, String dataFechamento, String dataVencimento, int resultado,
 			int situacao, String observacao, Taxa taxa) {
 		this.cliente = cliente;
 		this.especialidade = especialidade;
@@ -143,42 +142,42 @@ public class Processo {
 	/**
 	 * @return the dataAbertura
 	 */
-	public Calendar getDataAbertura() {
+	public String getDataAbertura() {
 		return dataAbertura;
 	}
 
 	/**
 	 * @param dataAbertura the dataAbertura to set
 	 */
-	public void setDataAbertura(Calendar dataAbertura) {
+	public void setDataAbertura(String dataAbertura) {
 		this.dataAbertura = dataAbertura;
 	}
 
 	/**
 	 * @return the dataFechamento
 	 */
-	public Calendar getDataFechamento() {
+	public String getDataFechamento() {
 		return dataFechamento;
 	}
 
 	/**
 	 * @param dataFechamento the dataFechamento to set
 	 */
-	public void setDataFechamento(Calendar dataFechamento) {
+	public void setDataFechamento(String dataFechamento) {
 		this.dataFechamento = dataFechamento;
 	}
 
 	/**
 	 * @return the dataVencimento
 	 */
-	public Calendar getDataVencimento() {
+	public String getDataVencimento() {
 		return dataVencimento;
 	}
 
 	/**
 	 * @param dataVencimento the dataVencimento to set
 	 */
-	public void setDataVencimento(Calendar dataVencimento) {
+	public void setDataVencimento(String dataVencimento) {
 		this.dataVencimento = dataVencimento;
 	}
 

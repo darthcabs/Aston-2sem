@@ -1,9 +1,8 @@
 package br.com.fiap.beans;
 
-import java.util.Calendar;
 
 public class Honorario {
-	Calendar data;
+	String data;
 	double duracao;
 	String observacao;
 	String tarefa;
@@ -22,7 +21,7 @@ public class Honorario {
 	 * @param tarefa
 	 * @param advogado
 	 */
-	public Honorario(Calendar data, double duracao, String observacao, String tarefa, Advogado advogado) {
+	public Honorario(String data, double duracao, String observacao, String tarefa, Advogado advogado) {
 		this.data = data;
 		this.duracao = duracao;
 		this.observacao = observacao;
@@ -33,14 +32,14 @@ public class Honorario {
 	/**
 	 * @return the data
 	 */
-	public Calendar getData() {
+	public String getData() {
 		return data;
 	}
 
 	/**
 	 * @param data the data to set
 	 */
-	public void setData(Calendar data) {
+	public void setData(String data) {
 		this.data = data;
 	}
 
