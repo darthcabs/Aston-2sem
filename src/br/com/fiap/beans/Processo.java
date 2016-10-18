@@ -4,6 +4,7 @@ import java.util.Calendar;
 import java.util.List;
 
 public class Processo {
+	long codigo;
 	Cliente cliente;
 	Especialidade especialidade;
 	List<Honorario> honorario;
@@ -25,10 +26,10 @@ public class Processo {
 		// TODO Auto-generated constructor stub
 	}
 
-	public Processo(Cliente cliente, Especialidade especialidade, List<Honorario> honorario, Forum forum,
+	public Processo(long codigo, Cliente cliente, Especialidade especialidade, List<Honorario> honorario, Forum forum,
 			List<Despesa> despesa, String descricao, Calendar dataAbertura, Calendar dataFechamento,
 			Calendar dataVencimento, int resultado, int situacao, String observacao, Taxa taxa) {
-		super();
+		this.codigo = codigo;
 		this.cliente = cliente;
 		this.especialidade = especialidade;
 		this.honorario = honorario;
@@ -58,13 +59,27 @@ public class Processo {
 	 * @param situacao
 	 * @param observacao
 	 */
-	
 
+	
 	/**
 	 * @return the cliente
 	 */
 	public Cliente getCliente() {
 		return cliente;
+	}
+
+	/**
+	 * @return the codigo
+	 */
+	public long getCodigo() {
+		return codigo;
+	}
+
+	/**
+	 * @param codigo the codigo to set
+	 */
+	public void setCodigo(long codigo) {
+		this.codigo = codigo;
 	}
 
 	/**
