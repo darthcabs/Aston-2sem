@@ -1,9 +1,9 @@
 package br.com.fiap.servlets;
 
 import java.io.IOException;
-import java.text.ParseException;
-import java.text.SimpleDateFormat;
-import java.util.Calendar;
+import java.sql.Connection;
+import java.util.ArrayList;
+import java.util.List;
 
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
@@ -11,22 +11,32 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-import br.com.fiap.beans.Despesa;
+import br.com.fiap.beans.Processo;
+import br.com.fiap.bo.ProcessoBO;
+import br.com.fiap.db.ConnectionFactory;
 
-@WebServlet("/despesa")
-public class DespesaServlet extends HttpServlet{
+@WebServlet("/processos")
+public class ProcessoServlet extends HttpServlet{
+
+	private static final long serialVersionUID = -1079415543766042044L;
+
 	@Override
-	protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-		String data = req.getParameter("data");
-		Double valor = Double.parseDouble(req.getParameter("valor"));
-		String observacao = req.getParameter("observacao");
-		
-		//Despesa despesa = new Despesa(data,valor,observacao,null);
-		
-		//DespesaBO bo = new DespesaBO();
-		//bo.lancar(despesa);
-		
-		req.setAttribute("mensagem", "Despesa lançada com sucesso!");
-		req.getRequestDispatcher("lancarDespesa.jsp").forward(req, resp);
+	protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+		Connection conn = null;
+		try{
+			conn = ConnectionFactory.controlInstance().getConnection();
+			
+			
+			
+		}catch(Exception e){
+			req.setAttribute("mensagem", e.getMessage());
+			req.getRequestDispatcher("listarProcessos.jsp").forward(req, resp);
+		}finally{
+			try{
+				conn.close();
+			}catch(Exception e){
+				e.printStackTrace();
+			}
+		}
 	}
 }

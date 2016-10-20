@@ -1,3 +1,5 @@
-<footer class="footerStyle">
-	<h5 class="text-center">Todos os direitos reservados. Aston</h5>
-</footer>
+<div class="panel panel-default">
+  <div class="panel-footer">
+  	<div class="panel-body text-center">Aston - Todos os direitos reservados.</div>
+  </div>
+</div>

@@ -12,8 +12,9 @@ public class Pessoa {
 
 	}
 	
-	public Pessoa(String nome){
+	public Pessoa(long codigo,String nome){
 		this.nome = nome;
+		this.codigo = codigo;
 	}
 	public Pessoa(long codigo, List<Telefone> telefone, List<Endereco> endereco) {
 		this.codigo = codigo;

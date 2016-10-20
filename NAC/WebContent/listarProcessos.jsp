@@ -41,20 +41,21 @@
 				<th>Descrição</th>
 				<th>Ação</th>
 			</tr>
-			<c:if test="${not empty mensagem}">
-				<div class="alert alert-info">${mensagem}</div>
-			</c:if>
-
 			<c:forEach var="processo" items="${lstProcessos}">
 				<tr>
 					<td>${processo.numero}</td>
 					<td>${processo.forum.descricao }</td>
 					<td>${processo.descricao}</td>
-					<td><a class="btn btn-success" href="/honorario">Honorários</a><a
-						class="btn btn-success" href="DespesaServlet">Despesas</a></td>
+					<td><a class="btn btn-success" href="honorario">Honorários</a>
+					<a class="" href="despesa">Despesas</a></td>
 				</tr>
 			</c:forEach>
 		</table>
+		<c:if test="${not empty mensagem}">
+				<div class="alert alert-info">${mensagem}</div>
+			</c:if>
 	</section>
+	
+	<%@ include file="footer.jsp" %>
 </body>
 </html>
