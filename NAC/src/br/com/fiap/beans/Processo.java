@@ -19,6 +19,25 @@ public class Processo {
 	String observacao;
 	Taxa taxa;
 	
+	public Processo(long numero, Cliente cliente, Causa especialidade, Advogado advogado, Forum forum, String descricao,
+			String dataAbertura, String dataFechamento, String dataVencimento,
+			int resultado, int situacao,
+			String observacao){
+		this.numero = numero;
+		this.cliente = cliente;
+		this.forum = forum;
+		this.descricao = descricao;
+		this.dataAbertura = dataAbertura;
+		this.dataFechamento = dataFechamento;
+		this.dataVencimento = dataVencimento;
+		this.resultado = resultado;
+		this.situacao = situacao;
+		this.observacao = observacao;
+		this.especialidade = especialidade;
+		this.advogado = advogado;
+	}
+	
+	
 	/**
 	 * 
 	 */
@@ -63,12 +82,7 @@ public class Processo {
 		this.taxa = taxa;
 	}
 
-	public Processo(long numero, String descricao, Forum forum, Cliente cliente){
-		this.numero = numero;
-		this.descricao = descricao;
-		this.forum = forum;
-		this.cliente = cliente;
-	}
+	
 	
 	/**
 	 * @return the numero

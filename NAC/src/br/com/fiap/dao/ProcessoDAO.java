@@ -7,6 +7,8 @@ import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.List;
 
+import br.com.fiap.beans.Advogado;
+import br.com.fiap.beans.Causa;
 import br.com.fiap.beans.Cliente;
 import br.com.fiap.beans.Forum;
 import br.com.fiap.beans.Processo;
@@ -57,10 +59,20 @@ public class ProcessoDAO {
 		
 		while(resProc.next()){
 			long numero = resProc.getLong("NR_PROCESSO");
-			String descricao = resProc.getString("DS_PROCESSO");
 			Forum forum = new Forum(resProc.getString("FORUM"));
 			Cliente cliente = new Cliente(resProc.getString("CLIENTE"));
-			Processo processo = new Processo(numero,descricao,forum,cliente);
+			Advogado advogado = new Advogado(resProc.getString("ADVOGADO"));
+			Causa causa = new Causa(resProc.getString("CAUSA"));
+			String descricao = resProc.getString("DS_PROCESSO");
+			String dataAbertura = resProc.getString("DT_ABERTURA");
+			String dataFechamento = resProc.getString("DT_FECHAMENTO");
+			String diaVencimento = resProc.getString("DT_DIA_VENCIMENTO");
+			int numeroResultado = Integer.parseInt(resProc.getString("NR_RESULTADO"));
+			int numeroSituacao = Integer.parseInt(resProc.getString("NR_SITUACAO"));
+			String observacao = resProc.getString("DS_OBSERVACAO");
+			Processo processo = new Processo(numero,cliente,causa,advogado, forum, descricao,
+					dataAbertura, dataFechamento, diaVencimento,numeroResultado,
+					numeroSituacao, observacao);
 			
 			processos.add(processo);
 		}
@@ -90,9 +102,20 @@ public class ProcessoDAO {
 		Processo processo = null;
 		if(resProc.next()){
 			long numero = resProc.getLong("NR_PROCESSO");
+			Forum forum = new Forum(resProc.getString("FORUM"));
+			Cliente cliente = new Cliente(resProc.getString("CLIENTE"));
+			Advogado advogado = new Advogado(resProc.getString("ADVOGADO"));
+			Causa causa = new Causa(resProc.getString("CAUSA"));
 			String descricao = resProc.getString("DS_PROCESSO");
-			Forum forumObj = new Forum(resProc.getString("FORUM"));
-			processo = new Processo(numero,descricao, forumObj);
+			String dataAbertura = resProc.getString("DT_ABERTURA");
+			String dataFechamento = resProc.getString("DT_FECHAMENTO");
+			String diaVencimento = resProc.getString("DT_DIA_VENCIMENTO");
+			int numeroResultado = Integer.parseInt(resProc.getString("NR_RESULTADO"));
+			int numeroSituacao = Integer.parseInt(resProc.getString("NR_SITUACAO"));
+			String observacao = resProc.getString("DS_OBSERVACAO");
+			processo = new Processo(numero,cliente,causa,advogado, forum, descricao,
+					dataAbertura, dataFechamento, diaVencimento,numeroResultado,
+					numeroSituacao, observacao);
 		}
 		resProc.close();
 		stmtProc.close();

@@ -11,7 +11,10 @@ public class Pessoa {
 	public Pessoa(){
 
 	}
-
+	
+	public Pessoa(String nome){
+		this.nome = nome;
+	}
 	public Pessoa(long codigo, List<Telefone> telefone, List<Endereco> endereco) {
 		this.codigo = codigo;
 		this.telefones = telefone;

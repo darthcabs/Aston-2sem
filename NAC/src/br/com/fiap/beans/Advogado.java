@@ -26,6 +26,10 @@ public class Advogado extends Pessoa {
 		this.hora = hora;
 		this.tipoCausa = tipoCausa;
 	}
+	
+	public Advogado(String nome){
+		super(nome);
+	}
 
 	public String getOab() {
 		return oab;
