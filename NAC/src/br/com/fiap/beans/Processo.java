@@ -63,10 +63,11 @@ public class Processo {
 		this.taxa = taxa;
 	}
 
-	public Processo(long numero, String descricao, Forum forum){
+	public Processo(long numero, String descricao, Forum forum, Cliente cliente){
 		this.numero = numero;
 		this.descricao = descricao;
 		this.forum = forum;
+		this.cliente = cliente;
 	}
 	
 	/**

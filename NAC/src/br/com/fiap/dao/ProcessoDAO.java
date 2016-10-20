@@ -58,9 +58,9 @@ public class ProcessoDAO {
 		while(resProc.next()){
 			long numero = resProc.getLong("NR_PROCESSO");
 			String descricao = resProc.getString("DS_PROCESSO");
-			Forum forumObj = new Forum(resProc.getString("FORUM"));
+			Forum forum = new Forum(resProc.getString("FORUM"));
 			Cliente cliente = new Cliente(resProc.getString("CLIENTE"));
-			Processo processo = new Processo(numero,descricao,forumObj);
+			Processo processo = new Processo(numero,descricao,forum,cliente);
 			
 			processos.add(processo);
 		}
