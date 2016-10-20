@@ -1,0 +1,21 @@
+@CHARSET "UTF-8";
+
+body{
+	background-color: white;
+}
+.mainSection{
+	background-color: white;
+	border-radius: 10px;
+	height: 550px; 
+}
+.topMenuStyle, .footerStyle{
+	background-color: #757896;
+	border: none;
+	border-radius:0px;
+	padding:5px;
+}
+
+.topMenuStyle a{
+	font-style: none;
+	color:black;
+}
